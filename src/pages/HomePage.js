@@ -89,6 +89,7 @@ const HomePage = () => {
     useCallback(
       async () => {
     const res = await apiService.get(`/cars?page=${page}`);
+    console.log("res", res.data);
     setCars(res.data.cars);
     setTotalPages(res.data.total);
       }
